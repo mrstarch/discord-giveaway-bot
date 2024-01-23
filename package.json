@@ -2,18 +2,20 @@
   "name": "discord-giveaway-bot",
   "version": "1.0.0",
   "description": "A Discord bot that manages and chooses a winner depending on user voice activity. The prizes are random and with drop chances",
-  "main": "index.js",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node app.js",
     "add-commands": "node deploy-commands.js"
   },
   "author": "mrstarch",
   "license": "MIT",
   "dependencies": {
-    "@discordjs/voice": "^0.16.1",
     "cron": "^3.1.6",
-    "discord.js": "^14.14.1",
-    "dotenv": "^16.3.2"
+    "discord-interactions": "^3.4.0",
+    "dotenv": "^16.3.2",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "eslint": "^8.56.0"
