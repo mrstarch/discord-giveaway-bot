@@ -8,7 +8,7 @@ const {
 
 // Read/Write maps from/to json
 function readJsonFileToMap(filePath) {
-  let jsonObj = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  let jsonObj = readJsonFile(filePath);
   let mapObj = new Map(jsonObj);
   return mapObj;
 }
@@ -19,6 +19,14 @@ function writeMapToJsonFile(mapObj, filePath) {
     JSON.stringify(Array.from(mapObj.entries())),
     'utf-8'
   );
+}
+
+function readJsonFile(filePath) {
+  return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+}
+
+function writeJsonFile(obj, filePath) {
+  fs.writeFileSync(filePath, JSON.stringify(obj), 'utf-8');
 }
 
 function checkAllJSONFiles() {
@@ -111,4 +119,6 @@ module.exports = {
   checkAllJSONFiles,
   checkVoiceUsersActivityFile,
   checkRewardFile,
+  readJsonFile,
+  writeJsonFile,
 };
