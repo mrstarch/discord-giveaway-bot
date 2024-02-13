@@ -23,7 +23,7 @@ function scheduleGiveawayDate() {
 async function createAndSendWinnerMessage() {
   let winnerObj = chooseWinner();
   let hostId = chooseHost();
-  let itemObj = chooseItem();
+  let itemObj = chooseReward();
 
   if (!winnerObj || !hostId || !itemObj) {
     console.info('Either no host, no candidates, or prizes found');
@@ -107,7 +107,7 @@ function chooseHost() {
   return hostUsers[currentHostIndex];
 }
 
-function chooseItem() {
+function chooseReward() {
   checkRewardFile();
   const rewardMap = readJsonFileToMap(rewardsFile);
   const rolledNumRarity = Math.random();
@@ -143,5 +143,5 @@ module.exports = {
   scheduleGiveawayDate,
   chooseWinner,
   chooseHost,
-  chooseItem,
+  chooseReward,
 };

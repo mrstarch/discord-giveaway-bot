@@ -26,5 +26,6 @@ CLIENT_ID = your_discord_bot_client_id_here
 ##Versions
 | Version | Date | Changes |
 | --- | --- | --- |
+| 1.0.2 | 12/02/2024 | Add Reward commands |
 | 1.0.1 | 10/02/2024 | Add Host commands and remove demo info commands |
 | 1.0.0 | 20/01/2024 | Initial upload and some initial functionality |

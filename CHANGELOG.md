@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
+## [1.0.2] - 12-02-2024
+
+### Added
+
+- Added Reward commands (Add, Remove, List)
+
 ## [1.0.1] - 10-02-2024
 
 ### Added
